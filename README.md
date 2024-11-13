@@ -9,6 +9,12 @@ Super extensible, already done some of the busy work like authenticating routes,
 
 glhf
 
+### Data
+
+CRUD apps need to store data somewhere - I added prisma already, but you'll have to kerjigger it depending on where you want to store stuff.
+
+As mentioned, this is for when I have a whim, so most of the time I'll build locally with a sqlite db, then upgrade to postgresql when it's time to send it, but you can do whatever.
+
 ### Support
 
 no idk just fork it

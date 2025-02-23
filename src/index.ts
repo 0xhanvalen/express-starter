@@ -6,8 +6,9 @@ import express from "express";
 import cors from "cors";
 import http from "http";
 import { WSS } from "./lib/wss";
+import cron from "node-cron";
 
-async () => {
+(async () => {
 	const app = express();
 	app.use(cors());
 	app.use(express.json());
@@ -30,4 +31,12 @@ async () => {
 	server.listen(PORT, () => {
 		console.log(`Server is running on port ${PORT}`);
 	});
-};
+
+	// cron job example
+	async function exampleCron() {
+		console.log("running a task every 5 seconds");
+		const now = new Date();
+		console.log(now);
+	}
+	cron.schedule("*/5 * * * * *", exampleCron);
+})();
